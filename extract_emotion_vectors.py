@@ -73,7 +73,7 @@ def class_mean(acts, texts):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True)
-    ap.add_argument("--data-dir", default=".")
+    ap.add_argument("--data-dir", default="prompts")
     ap.add_argument("--out-dir", default="results/emotion_vectors")
     ap.add_argument("--emotions", nargs="+", help="subset of emotion names (default: all)")
     ap.add_argument("--batch-size", type=int, default=8)
