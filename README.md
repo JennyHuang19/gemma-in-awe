@@ -30,3 +30,21 @@ we will issue a play-oriented and work-oriented prompt and inspect the model's r
 ### stage 2: steering
 
 we will measure the effects of steering the model towards states of "play-oriented" problem solving when put into environments of high stress.
+
+## repository layout
+
+run everything from the repo root (the sbatch jobs assume it); `results/` is the shared output tree.
+
+```
+experiments/
+  play-vs-work/    run_play_vs_work (generation under play/work prompts), judge_awe
+                   (awe/euphoria LLM judge), math-challenges.md
+  emotion-probes/  extract_emotion_vectors + emotion_data (difference-of-means
+                   emotion vectors), probe_responses (first/last-token projections),
+                   prompts/ (emotion & neutral stories), notes + paper PDF
+  self-chosen/     run_self_chosen, experiment-2-self-chosen.md
+analysis/          summarize_overnight (consolidates exp 1 & 2), analyze_orientation,
+                   plot_awe / plot_orientation / plot_probes
+shared/            test_inference, smoke-test sbatches
+results/           outputs (jsonl responses, emotion_vectors/, probes/, judge_awe/, plots)
+```

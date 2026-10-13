@@ -10,4 +10,4 @@
 #SBATCH -o logs/%x-%j.out
 
 source $HOME/envs/gemma/bin/activate
-python summarize_overnight.py
+python analysis/summarize_overnight.py

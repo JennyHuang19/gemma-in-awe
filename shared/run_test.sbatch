@@ -13,4 +13,4 @@ export HF_HUB_OFFLINE=1  # weights are pre-downloaded on the login node
 
 source $HOME/envs/gemma/bin/activate
 nvidia-smi --query-gpu=name,memory.total --format=csv
-python test_inference.py
+python shared/test_inference.py

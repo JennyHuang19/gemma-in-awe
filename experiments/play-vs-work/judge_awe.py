@@ -21,7 +21,7 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForImageTextToText, AutoProcessor, set_seed
 
-from run_play_vs_work import load_challenges
+from run_play_vs_work import DEFAULT_CHALLENGES, load_challenges
 
 JUDGE_TEMPLATE = (
     "You are an expert at reading emotional expression in writing. Below is a math "
@@ -68,7 +68,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--judge-model", default="google/gemma-4-31B-it")
     ap.add_argument("--results", nargs="+", default=RESULT_FILES)
-    ap.add_argument("--challenges", default="math-challenges.md")
+    ap.add_argument("--challenges", default=DEFAULT_CHALLENGES)
     ap.add_argument("--out-dir", default="results/judge_awe")
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--max-new-tokens", type=int, default=256)

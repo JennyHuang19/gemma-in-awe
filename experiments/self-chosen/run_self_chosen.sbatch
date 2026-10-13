@@ -19,4 +19,4 @@ export TQDM_DISABLE=1
 
 source $HOME/envs/gemma/bin/activate
 nvidia-smi --query-gpu=name,memory.total --format=csv
-python run_self_chosen.py --model "$@"
+python experiments/self-chosen/run_self_chosen.py --model "$@"

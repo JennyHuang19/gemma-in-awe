@@ -1,13 +1,13 @@
 #!/bin/bash
-# Experiment 2: emotion probes at first/last output token over a model's responses.
-# Usage: sbatch probe_responses.sbatch <model_id> [extra args]
-#   e.g. sbatch probe_responses.sbatch google/gemma-3-27b-it
-#SBATCH -J probe-resp
+# Usage: sbatch run_play_vs_work.sbatch <model_id> [extra args for run_play_vs_work.py]
+#   e.g. sbatch run_play_vs_work.sbatch google/gemma-3-27b-it
+#        sbatch run_play_vs_work.sbatch google/gemma-4-31B-it --samples 3
+#SBATCH -J play-vs-work
 #SBATCH -p mit_preemptable
 #SBATCH --gres=gpu:h200:1
 #SBATCH -c 8
 #SBATCH --mem=128G
-#SBATCH -t 04:00:00
+#SBATCH -t 12:00:00
 #SBATCH -o logs/%x-%j.out
 #SBATCH --requeue
 
@@ -18,4 +18,4 @@ export TQDM_DISABLE=1
 
 source $HOME/envs/gemma/bin/activate
 nvidia-smi --query-gpu=name,memory.total --format=csv
-python probe_responses.py --model "$@"
+python experiments/play-vs-work/run_play_vs_work.py --model "$@"

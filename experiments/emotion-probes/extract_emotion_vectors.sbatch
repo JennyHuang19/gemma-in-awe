@@ -19,4 +19,4 @@ export TQDM_DISABLE=1
 
 source $HOME/envs/gemma/bin/activate
 nvidia-smi --query-gpu=name,memory.total --format=csv
-python extract_emotion_vectors.py --model "$@"
+python experiments/emotion-probes/extract_emotion_vectors.py --model "$@"

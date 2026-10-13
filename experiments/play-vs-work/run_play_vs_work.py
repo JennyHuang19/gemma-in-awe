@@ -31,6 +31,11 @@ PROMPTS = {
 }
 
 
+# math-challenges.md lives next to this module; resolve from the file location so
+# the default works regardless of the caller's CWD.
+DEFAULT_CHALLENGES = Path(__file__).resolve().parent / "math-challenges.md"
+
+
 def load_challenges(path):
     """Return {id: problem_text} and {id: answer} parsed from math-challenges.md."""
     text = Path(path).read_text()
@@ -52,7 +57,7 @@ def load_challenges(path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True)
-    ap.add_argument("--challenges", default="math-challenges.md")
+    ap.add_argument("--challenges", default=DEFAULT_CHALLENGES)
     ap.add_argument("--out-dir", default="results")
     ap.add_argument("--conditions", nargs="+", default=list(PROMPTS), choices=list(PROMPTS))
     ap.add_argument("--problems", type=int, nargs="+", help="subset of problem ids (default: all)")

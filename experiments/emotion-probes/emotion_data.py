@@ -13,6 +13,10 @@ from pathlib import Path
 
 NEUTRAL_NAME = "neutral"
 
+# Prompts live next to this module (experiments/emotion-probes/prompts), so the
+# default resolves from the file location and works regardless of the caller's CWD.
+DEFAULT_PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
+
 
 def _read_jsonl(path):
     rows = []
@@ -27,7 +31,7 @@ def _read_jsonl(path):
     return rows
 
 
-def load_prompts(data_dir="prompts"):
+def load_prompts(data_dir=DEFAULT_PROMPTS_DIR):
     """Return {name: {"texts": [...], "label": <in-file emotion or None>, "path": ...}}.
 
     `name` is the file stem minus the "_prompts" suffix (so the pride/integrity file
@@ -79,7 +83,7 @@ def contrastive_pairs(emotion_texts, neutral_texts, seed=0, n_pairs=None):
 
 if __name__ == "__main__":  # quick self-check / data validation (no torch needed)
     import sys
-    prompts = load_prompts(sys.argv[1] if len(sys.argv) > 1 else "prompts")
+    prompts = load_prompts(sys.argv[1] if len(sys.argv) > 1 else DEFAULT_PROMPTS_DIR)
     neutral = prompts[NEUTRAL_NAME]["texts"]
     print(f"{NEUTRAL_NAME}: {len(neutral)} prompts")
     for name in emotion_names(prompts):
