@@ -1,0 +1,21 @@
+name, memory.total [MiB]
+NVIDIA H100 80GB HBM3, 81559 MiB
+Traceback (most recent call last):
+  File "/orcd/home/002/jhuang9/gemma-in-awe/test_inference.py", line 10, in <module>
+    processor = AutoProcessor.from_pretrained(MODEL_ID)
+  File "/home/jhuang9/envs/gemma/lib/python3.14/site-packages/transformers/models/auto/processing_auto.py", line 346, in from_pretrained
+    return processor_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, trust_remote_code=trust_remote_code, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/jhuang9/envs/gemma/lib/python3.14/site-packages/transformers/processing_utils.py", line 1754, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, processor_dict, **kwargs)
+  File "/home/jhuang9/envs/gemma/lib/python3.14/site-packages/transformers/processing_utils.py", line 1894, in _get_arguments_from_pretrained
+    sub_processor = auto_processor_class.from_pretrained(
+        pretrained_model_name_or_path, subfolder=subfolder, **kwargs
+    )
+  File "/home/jhuang9/envs/gemma/lib/python3.14/site-packages/transformers/models/auto/image_processing_auto.py", line 716, in from_pretrained
+    raise ValueError(_format_unavailable_image_processor_error(pretrained_model_name_or_path, mapping))
+ValueError: Could not load any image processor class for google/gemma-3-27b-it. The model configuration resolves to the following image processor classes: pil: Gemma3ImageProcessorPil, torchvision: Gemma3ImageProcessor. None of these classes could be imported. Missing optional dependencies: torchvision, Pillow. Please install the missing dependencies or select a backend that is available in your environment.

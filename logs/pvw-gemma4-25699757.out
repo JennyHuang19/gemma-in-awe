@@ -1,0 +1,9 @@
+name, memory.total [MiB]
+NVIDIA H200, 143771 MiB
+gemma-4-31B-it: 0 done, 180 to run -> results/gemma-4-31B-it.jsonl
+[32/180] batch of 32 in 551s, max 1537 new tokens
+[64/180] batch of 32 in 297s, max 1780 new tokens
+[96/180] batch of 32 in 482s, max 2509 new tokens
+[128/180] batch of 32 in 414s, max 2255 new tokens
+[160/180] batch of 32 in 350s, max 1999 new tokens
+[180/180] batch of 20 in 514s, max 1717 new tokens

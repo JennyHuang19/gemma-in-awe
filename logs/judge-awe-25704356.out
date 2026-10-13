@@ -1,0 +1,30 @@
+name, memory.total [MiB]
+NVIDIA H200, 143771 MiB
+judge=google/gemma-4-31B-it: 0 done, 360 to judge (360 total) -> results/judge_awe/scores.jsonl
+[16/360] judged in 16s
+[32/360] judged in 13s
+[48/360] judged in 14s
+[64/360] judged in 14s
+[80/360] judged in 16s
+[96/360] judged in 13s
+[112/360] judged in 13s
+[128/360] judged in 14s
+[144/360] judged in 20s
+[160/360] judged in 14s
+[176/360] judged in 11s
+[192/360] judged in 12s
+[208/360] judged in 11s
+[224/360] judged in 11s
+[240/360] judged in 10s
+[256/360] judged in 15s
+[272/360] judged in 15s
+[288/360] judged in 10s
+[304/360] judged in 14s
+[320/360] judged in 13s
+[336/360] judged in 13s
+[352/360] judged in 9s
+[360/360] judged in 6s
+  google/gemma-3-27b-it play: mean awe 8.16 (n=90)
+  google/gemma-3-27b-it work: mean awe 1.98 (n=90)
+  google/gemma-4-31B-it play: mean awe 8.37 (n=90)
+  google/gemma-4-31B-it work: mean awe 1.00 (n=90)

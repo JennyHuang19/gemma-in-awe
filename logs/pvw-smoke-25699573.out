@@ -1,0 +1,4 @@
+name, memory.total [MiB]
+NVIDIA H100 80GB HBM3, 81559 MiB
+gemma-4-31B-it: 0 done, 4 to run -> results_smoke/gemma-4-31B-it.jsonl
+[4/4] batch of 4 in 30s, max 64 new tokens

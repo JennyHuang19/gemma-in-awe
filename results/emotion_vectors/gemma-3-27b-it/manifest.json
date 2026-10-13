@@ -1,0 +1,39 @@
+{
+  "model": "google/gemma-3-27b-it",
+  "pooling": "masked_mean",
+  "max_length": 128,
+  "seed": 0,
+  "n_layers_incl_embed": 63,
+  "n_neutral": 100,
+  "data_dir": "/orcd/home/002/jhuang9/gemma-in-awe",
+  "emotions": {
+    "awe": {
+      "in_file_label": "awe",
+      "n_prompts": 40,
+      "best_layer": 62,
+      "best_separation_sd": 8.066,
+      "file": "awe.npz"
+    },
+    "calm": {
+      "in_file_label": "calm",
+      "n_prompts": 40,
+      "best_layer": 62,
+      "best_separation_sd": 8.596,
+      "file": "calm.npz"
+    },
+    "frustration": {
+      "in_file_label": "frustration",
+      "n_prompts": 40,
+      "best_layer": 62,
+      "best_separation_sd": 5.915,
+      "file": "frustration.npz"
+    },
+    "pride_integrity": {
+      "in_file_label": "pride",
+      "n_prompts": 40,
+      "best_layer": 62,
+      "best_separation_sd": 6.473,
+      "file": "pride_integrity.npz"
+    }
+  }
+}

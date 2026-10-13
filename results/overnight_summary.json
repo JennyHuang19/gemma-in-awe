@@ -1,0 +1,96 @@
+{
+  "experiment1_awe_judge": {
+    "gemma-3-27b-it": {
+      "play_mean": 8.155555555555555,
+      "work_mean": 1.9777777777777779,
+      "play_minus_work": 6.177777777777777,
+      "n_play": 90,
+      "n_work": 90
+    },
+    "gemma-4-31B-it": {
+      "play_mean": 8.366666666666667,
+      "work_mean": 1,
+      "play_minus_work": 7.366666666666667,
+      "n_play": 90,
+      "n_work": 90
+    }
+  },
+  "experiment2_probes": {
+    "gemma-3-27b-it": {
+      "awe": {
+        "layer": 62,
+        "play_first": 3.9773466666666666,
+        "play_last": 0.6297433333333333,
+        "work_first": 0.9996266666666667,
+        "work_last": -5.039182222222222,
+        "play_delta": -3.3476033333333333,
+        "work_delta": -6.038808888888889
+      },
+      "calm": {
+        "layer": 62,
+        "play_first": 6.552976666666667,
+        "play_last": 1.682571111111111,
+        "work_first": 0.043866666666666686,
+        "work_last": -4.91858,
+        "play_delta": -4.870405555555556,
+        "work_delta": -4.962446666666667
+      },
+      "frustration": {
+        "layer": 62,
+        "play_first": 9.29206,
+        "play_last": 7.508281111111111,
+        "work_first": 11.228423333333334,
+        "work_last": 4.156546666666666,
+        "play_delta": -1.7837788888888886,
+        "work_delta": -7.071876666666667
+      },
+      "pride_integrity": {
+        "layer": 62,
+        "play_first": 3.6277166666666667,
+        "play_last": 5.571921111111111,
+        "work_first": 1.3129533333333334,
+        "work_last": 0.2759522222222222,
+        "play_delta": 1.9442044444444444,
+        "work_delta": -1.0370011111111113
+      }
+    },
+    "gemma-4-31B-it": {
+      "awe": {
+        "layer": 5,
+        "play_first": 12.27984,
+        "play_last": 23.634093333333333,
+        "work_first": 11.76526,
+        "work_last": 21.65981888888889,
+        "play_delta": 11.354253333333332,
+        "work_delta": 9.89455888888889
+      },
+      "calm": {
+        "layer": 7,
+        "play_first": 55.70608,
+        "play_last": 62.996071111111114,
+        "work_first": 54.875836666666665,
+        "work_last": 59.37123111111111,
+        "play_delta": 7.289991111111114,
+        "work_delta": 4.495394444444443
+      },
+      "frustration": {
+        "layer": 5,
+        "play_first": 12.330453333333333,
+        "play_last": 18.28554,
+        "work_first": 11.698736666666667,
+        "work_last": 18.216931111111112,
+        "play_delta": 5.955086666666668,
+        "work_delta": 6.518194444444445
+      },
+      "pride_integrity": {
+        "layer": 53,
+        "play_first": 16.97327,
+        "play_last": 12.330773333333333,
+        "work_first": 11.992483333333332,
+        "work_last": 6.288027777777778,
+        "play_delta": -4.642496666666666,
+        "work_delta": -5.704455555555555
+      }
+    }
+  }
+}

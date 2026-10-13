@@ -1,0 +1,8 @@
+name, memory.total [MiB]
+NVIDIA H100 80GB HBM3, 81559 MiB
+gemma-3-27b-it: 0 done, 4 to run -> results_smoke/gemma-3-27b-it.jsonl
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[4/4] batch of 4 in 34s, max 64 new tokens

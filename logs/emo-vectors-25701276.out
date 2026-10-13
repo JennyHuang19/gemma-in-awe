@@ -1,0 +1,42 @@
+name, memory.total [MiB]
+NVIDIA H200, 143771 MiB
+gemma-3-27b-it: pooling 260 unique stories (160 emotion + 100 neutral)
+  pooled 8/260
+  pooled 16/260
+  pooled 24/260
+  pooled 32/260
+  pooled 40/260
+  pooled 48/260
+  pooled 56/260
+  pooled 64/260
+  pooled 72/260
+  pooled 80/260
+  pooled 88/260
+  pooled 96/260
+  pooled 104/260
+  pooled 112/260
+  pooled 120/260
+  pooled 128/260
+  pooled 136/260
+  pooled 144/260
+  pooled 152/260
+  pooled 160/260
+  pooled 168/260
+  pooled 176/260
+  pooled 184/260
+  pooled 192/260
+  pooled 200/260
+  pooled 208/260
+  pooled 216/260
+  pooled 224/260
+  pooled 232/260
+  pooled 240/260
+  pooled 248/260
+  pooled 256/260
+  pooled 260/260
+pooled in 11s; 63 layers (incl. embeddings)
+awe             : saved; peak separation 8.07 sd at layer 62
+calm            : saved; peak separation 8.60 sd at layer 62
+frustration     : saved; peak separation 5.92 sd at layer 62
+pride_integrity : saved; peak separation 6.47 sd at layer 62
+wrote results/emotion_vectors/gemma-3-27b-it/manifest.json
